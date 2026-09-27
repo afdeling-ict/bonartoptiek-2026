@@ -15,8 +15,8 @@
   let ticking = false;
   function updateBars() {
     const past = scrollY > (hero ? hero.offsetHeight - 90 : 40);
-    header.classList.toggle("on-light", hero ? past : true); /* subpagina's: altijd lichte header */
-    if (stickyBar) stickyBar.classList.toggle("show", past);
+    header.classList.toggle("on-light", past);
+    stickyBar.classList.toggle("show", past);
     ticking = false;
   }
   addEventListener("scroll", () => {
@@ -41,38 +41,6 @@
       }
     }, { threshold: 0.12 });
     document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
-  }
-
-  /* ---------- 5. Online agenda (afspraak.html): automatische iframe-hoogte ----------
-     De agenda laadt zelf iframe-resizer (v4, contentWindow-kant). Dit is de
-     minimale ouderkant van dat protocol, zonder externe bibliotheek. Werkt het
-     niet, dan houdt de iframe gewoon de CSS-hoogte en scrollt hij intern. */
-  const agenda = document.getElementById("boeken");
-  if (agenda) {
-    const AGENDA_ORIGIN = "https://apollo2cs0.bnfoptics.com";
-    const PREFIX = "[iFrameSizer]";
-    addEventListener("message", (e) => {
-      if (e.origin !== AGENDA_ORIGIN || typeof e.data !== "string" || !e.data.startsWith(PREFIX)) return;
-      const [id, h] = e.data.slice(PREFIX.length).split(":");
-      const px = parseInt(h, 10);
-      if (id === "boeken" && px > 0) agenda.style.height = px + "px";
-    });
-    agenda.addEventListener("load", () => {
-      /* id:marge:breedte:log:interval:publicMethods:autoResize:marginStr:heightCalc:bg:padding:tolerance:inPageLinks:resizeFrom:widthCalc:mouseEvents */
-      agenda.contentWindow.postMessage(PREFIX + "boeken:8:false:false:32:true:true:null:bodyOffset:null:null:0:false:parent:scroll:false", AGENDA_ORIGIN);
-    });
-  }
-
-  /* ---------- 6. Aankondigingen: alleen tonen binnen data-start / data-end ---------- */
-  const newsSection = document.getElementById("actueel");
-  if (newsSection) {
-    const d = new Date(); /* lokale datum van de bezoeker */
-    const today = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
-    const isActive = (el) => (!el.dataset.start || today >= el.dataset.start) && (!el.dataset.end || today <= el.dataset.end);
-    let active = 0;
-    newsSection.querySelectorAll(".notice").forEach((el) => { el.hidden = !isActive(el); if (!el.hidden) active++; });
-    newsSection.hidden = active === 0;
-    document.querySelectorAll(".hero-notice").forEach((el) => { el.hidden = !active || !isActive(el); });
   }
 
   /* ---------- 4. Iris-shader (WebGL2) in merkkleuren ---------- */

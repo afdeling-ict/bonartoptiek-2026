@@ -351,7 +351,7 @@ mark.ph {
   border-bottom: 1px solid var(--line-light);
 }
 .menu .btn { margin-top: 1.5rem; }
-.menu .menu-tel { border: 0; font-size: 1rem; color: var(--brand-orange); text-align: center; display: flex; justify-content: center; align-items: center; gap: 0.5rem; }
+.menu .menu-tel { border: 0; font-size: 1rem; color: var(--brand-orange); text-align: center; }
 .menu-close {
   align-self: flex-end;
   margin-bottom: 1rem;
@@ -793,91 +793,3 @@ html.js-reveal .reveal:not(.in) { opacity: 0; translate: 0 28px; }
   }
   .reveal, html.js-reveal .reveal:not(.in) { opacity: 1 !important; translate: none !important; }
 }
-
-/* --- Aanvullingen feedback eigenaar (sep 2026) --------------- */
-.card-urgent { border-color: var(--brand-orange); background: var(--cream); box-shadow: inset 4px 0 0 var(--brand-orange); }
-.card-tag { margin: 0 0 0.4rem !important; font-size: 0.78rem !important; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange-text) !important; }
-.card .link { display: inline-flex; margin-top: 0.8rem; }
-.dots-2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); column-gap: 1.5rem; }
-.spoed { font-size: 0.8rem; font-weight: 600; color: var(--orange-text); white-space: nowrap; }
-.zd-hint { margin: 0 0 0; font-size: 0.95rem; color: var(--ink-soft); }
-.brands { margin-top: clamp(2.5rem, 6vw, 4rem); padding-top: 2rem; border-top: 1px solid var(--line); }
-.brands-title { margin: 0 0 1.2rem; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: var(--ink-soft); }
-.brands-list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 1.2rem clamp(1.5rem, 4vw, 3rem); }
-.brands-list li { font-size: 1.15rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-2); }
-.brands-list img { height: 1.8rem; width: auto; filter: grayscale(1); opacity: 0.75; transition: opacity 0.3s var(--ease), filter 0.3s var(--ease); }
-.brands-list img:hover { filter: none; opacity: 1; }
-
-/* --- Subpagina: online afspraak ------------------------------- */
-.booking { padding: calc(var(--header-h) + clamp(2rem, 6vw, 4rem)) 0 clamp(3rem, 8vw, 6rem); min-height: 100vh; }
-.booking-head { max-width: 46rem; margin-bottom: clamp(1.5rem, 4vw, 2.5rem); }
-.booking-title { font-size: var(--text-2xl); margin: 0 0 0.8rem; }
-.booking-head a { color: var(--orange-text); font-weight: 600; }
-.booking-frame { background: #eee; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
-.booking-frame iframe { display: block; width: 100%; height: 44rem; min-height: 36rem; border: 0; transition: height 0.3s var(--ease); }
-.booking-fallback { margin: 1rem 0 0; font-size: var(--text-sm); color: var(--ink-soft); }
-.booking-fallback a { color: var(--orange-text); }
-
-/* --- Subpagina: privacyverklaring ----------------------------- */
-.legal { padding: calc(var(--header-h) + clamp(2rem, 6vw, 4rem)) 0 clamp(3rem, 8vw, 6rem); }
-.legal-wrap { max-width: 48rem; }
-.legal-head { margin-bottom: 2rem; }
-.legal h2 { font-size: var(--text-xl); margin: 0 0 0.8rem; }
-.legal h3 { font-size: 1.1rem; margin: 1.4rem 0 0.3rem; }
-.legal section { padding-top: 2.2rem; margin-top: 2.2rem; border-top: 1px solid var(--line); scroll-margin-top: var(--header-h); }
-.legal section p { color: var(--ink-2); }
-.legal a { color: var(--orange-text); }
-.legal-summary { background: var(--paper); border-left: 4px solid var(--brand-orange); border-radius: 0 var(--radius) var(--radius) 0; padding: 1.4rem 1.6rem; }
-.legal-summary h2 { font-size: 1.15rem; margin: 0; }
-.legal-summary .dots { margin-bottom: 0; }
-.legal-toc { margin-top: 2rem; }
-.legal-toc ol { margin: 0; padding-left: 1.3rem; columns: 2 16rem; column-gap: 2rem; }
-.legal-toc li { margin-bottom: 0.35rem; break-inside: avoid; }
-.legal-addr { font-style: normal; line-height: 1.7; }
-.table-scroll { overflow-x: auto; margin: 1rem 0; }
-.legal-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
-.legal-table th, .legal-table td { text-align: left; vertical-align: top; padding: 0.75rem 0.9rem; border-bottom: 1px solid var(--line); }
-.legal-table thead th { background: var(--brand-ink); color: var(--brand-white); font-weight: 600; }
-.legal-table td:first-child { width: 42%; font-weight: 500; }
-.legal .dots li { display: block; position: relative; padding-left: 1.3rem; }
-.legal .dots li::before { position: absolute; left: 0; top: 0.62em; }
-
-/* --- Actueel / aankondigingen --------------------------------- */
-.news { padding-block: clamp(2.5rem, 6vw, 4rem); background: var(--cream); }
-.news[hidden], .notice[hidden], .hero-notice[hidden] { display: none; }
-.news .label { margin: 0 0 1.4rem; }
-.news-list { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); }
-.notice {
-  background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius);
-  padding: 1.5rem 1.6rem; display: flex; flex-direction: column; gap: 0.5rem;
-}
-.notice h3 { font-size: 1.3rem; margin: 0; }
-.notice p { margin: 0; color: var(--ink-2); }
-.notice .link { margin-top: auto; padding-top: 0.6rem; }
-.notice-tag { font-size: 0.78rem !important; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange-text) !important; }
-.notice--featured {
-  grid-column: 1 / -1;
-  display: grid; grid-template-columns: 1.4fr 1fr; gap: clamp(1.5rem, 4vw, 3rem); align-items: start;
-  background: var(--orange-wash); border-color: var(--brand-orange);
-  box-shadow: inset 5px 0 0 var(--brand-orange);
-  padding: clamp(1.6rem, 4vw, 2.6rem);
-}
-.notice--featured h3 { font-size: var(--text-xl); margin-bottom: 0.4rem; }
-.notice-body { display: grid; gap: 0.6rem; }
-.notice-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 0.8rem; }
-.notice-facts { margin: 0; display: grid; gap: 1rem; background: var(--cream); border-radius: calc(var(--radius) * 0.75); padding: 1.3rem 1.4rem; }
-.notice-facts dt { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); }
-.notice-facts dd { margin: 0.2rem 0 0; font-weight: 500; }
-@media (max-width: 760px) { .notice--featured { grid-template-columns: 1fr; } }
-
-/* Hero-melding (pill) */
-.hero-notice {
-  display: inline-flex; align-items: center; gap: 0.6rem;
-  margin: 0 0 1.4rem; padding: 0.35rem 0.9rem 0.35rem 0.35rem;
-  border: 1px solid var(--line-light); border-radius: 999px;
-  color: var(--brand-white); font-size: var(--text-sm); text-decoration: none;
-  background: color-mix(in oklch, var(--brand-ink) 55%, transparent);
-  transition: border-color 0.3s var(--ease), color 0.3s var(--ease);
-}
-.hero-notice:hover { border-color: var(--brand-orange); color: var(--brand-orange); }
-.hero-notice-tag { background: var(--brand-orange); color: var(--brand-ink); font-weight: 600; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.2rem 0.6rem; border-radius: 999px; }

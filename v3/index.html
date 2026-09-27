@@ -16,26 +16,193 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Optician",
-  "name": "Bon Art Optiek Poort B.V.",
-  "url": "https://www.bonartoptiek.nl",
-  "logo": "https://www.bonartoptiek.nl/assets/img/logo-bonart-optiek.svg",
-  "email": "info@bonartoptiek.nl",
-  "telephone": "+31368456700",
-  "foundingDate": "2004",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Duitslandstraat 85",
-    "postalCode": "1363 BG",
-    "addressLocality": "Almere",
-    "addressCountry": "NL"
-  },
-  "geo": { "@type": "GeoCoordinates", "latitude": 52.347208, "longitude": 5.151977 },
-  "openingHoursSpecification": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "10:00", "closes": "17:00" }
-  ],
-  "areaServed": { "@type": "City", "name": "Almere" },
-  "sameAs": ["https://www.instagram.com/bonartoptiek/"]
+  "@graph": [
+    {
+      "@type": "Optician",
+      "@id": "https://www.bonartoptiek.nl/#optiek",
+      "name": "Bon Art Optiek",
+      "legalName": "Bon Art Optiek Poort B.V.",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "KvK",
+        "value": "75039303"
+      },
+      "description": "Allround centrum voor oogzorg en oogmode in Almere Poort: eerstelijns oogzorg, oogonderzoek, brillen en contactlenzen. Dinsdag t/m vrijdag geopend van 10.00 tot 17.00; maandag en zaterdag op afspraak open. Een afspraak buiten openingstijden is in overleg mogelijk.",
+      "url": "https://www.bonartoptiek.nl/",
+      "logo": "https://www.bonartoptiek.nl/assets/img/logo-bonart-optiek.svg",
+      "image": "https://www.bonartoptiek.nl/assets/img/bonart-interieur.webp",
+      "email": "info@bonartoptiek.nl",
+      "telephone": "+31368456700",
+      "foundingDate": "2004",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Duitslandstraat 85",
+        "postalCode": "1363 BG",
+        "addressLocality": "Almere",
+        "addressCountry": "NL"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 52.347208,
+        "longitude": 5.151977
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "10:00",
+          "closes": "17:00"
+        }
+      ],
+      "areaServed": {
+        "@type": "City",
+        "name": "Almere"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Oogzorg",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Oogonderzoek",
+              "description": "Een grondig onderzoek van uw ogen, gericht op het vroeg opsporen van afwijkingen en oogziekten."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Onderzoek naar oogklachten",
+              "description": "Wazig zien, hoofdpijn, vermoeide ogen of dubbelzien? Wij zoeken de oorzaak en bespreken met u of de oogarts nodig is."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Lichtflitsen of vlekken zien",
+              "description": "Ziet u plotseling lichtflitsen of nieuwe zwevende vlekjes in uw zicht? Neem direct contact op, dan kunt u dezelfde dag bij ons terecht. Buiten onze openingstijden belt u uw huisarts of de huisartsenpost."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Oogscreening bij diabetes",
+              "description": "Heeft u diabetes? Dan is een regelmatige controle van uw netvlies belangrijk. Uw huisarts verwijst u naar ons voor deze screening."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Screening op maculadegeneratie",
+              "description": "Wij onderzoeken de macula, het centrale deel van uw netvlies. Heeft uw huisarts u doorverwezen? Neem dan contact met ons op voor een afspraak."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Netvliesfoto en OCT-scan",
+              "description": "Met een netvliesfoto (fundusscreening) en een OCT-scan brengen wij uw netvlies nauwkeurig in beeld. Onze optometrist bespreekt de uitkomst en het advies met u."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Bijziendheid bij kinderen",
+              "description": "Wordt uw kind bijziend (myopie)? Wij onderzoeken de ogen van uw kind en adviseren u over de mogelijkheden. U komt via de huisarts of maakt zelf een afspraak."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Prismameting",
+              "description": "Een nauwkeurige meting bij dubbelzien of als uw ogen niet goed samenwerken. De basis voor comfortabel zien."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Oogkeuring rijbewijs (CBR)",
+              "description": "Vraagt het CBR om een oogkeuring voor uw rijbewijs? Dan kunt u bij ons terecht. Wij werken volgens de richtlijnen van het CBR en het keuringsverslag gaat digitaal en veilig via ZorgDomein."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Brillen, lenzen en oogdruppels",
+              "description": "Monturen, zonnebrillen, multifocale glazen, contactlenzen en oogdruppels, met persoonlijk advies."
+            }
+          }
+        ]
+      },
+      "sameAs": [
+        "https://www.instagram.com/bonartoptiek/"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.bonartoptiek.nl/#faq",
+      "about": {
+        "@id": "https://www.bonartoptiek.nl/#optiek"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Ik ben doorverwezen. Hoe maak ik een afspraak?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Maak een afspraak via de website, WhatsApp of telefoon en vertel ons wie u heeft doorverwezen. Neem uw verwijzing mee naar de afspraak. Waar nodig stemmen wij het vervolg af met uw verwijzer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Heb ik een verwijzing nodig?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Voor een oogmeting, een bril of contactlenzen heeft u geen verwijzing nodig. Heeft u wel een verwijzing, neem die dan mee."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wordt mijn oogonderzoek vergoed?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dat hangt af van uw zorgverzekering en de reden van het onderzoek. Vraag het ons gerust als u een afspraak maakt; wij denken graag met u mee."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kan ik ook buiten de openingstijden terecht?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Op maandag en zaterdag zijn wij op afspraak open, en ook op andere momenten vinden wij in overleg vaak een passende tijd."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ik woon niet in Almere Poort. Kan ik toch bij u terecht?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Natuurlijk. Klanten en patiënten uit heel Almere en omgeving zijn van harte welkom aan de Duitslandstraat 85."
+          }
+        }
+      ]
+    }
+  ]
 }
 </script>
 <script src="assets/js/main.js" defer></script>
